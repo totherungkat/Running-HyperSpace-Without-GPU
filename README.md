@@ -6,3 +6,7 @@ For This Command Especially for user those who can't install using a VPS from Co
 ```
 apt install docker.io -y
 ```
+2. Pull Docker Image
+```
+docker pull ubuntu:22.04
+```
