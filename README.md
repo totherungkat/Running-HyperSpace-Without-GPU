@@ -40,38 +40,43 @@ curl https://download.hyper.space/api/install | bash
 source /root/.bashrc
 ```
 
-6. Masuk ke tmux
+6. Create New Screen
 ```
-screen -R aios
+screen -Rd aios
+```
+> or
+```
+screen -S aios
 ```
 
 7. Start aios
 ```
 aios-cli start
 ```
-Setelah running, CTRL + A lalu D
 
-8. Buat file my.pem untuk menyimpan private key 
+> After Running, Press CTRL + A D
+
+8. Create File With Name my.pem to store the private key
 ```
 nano my.pem
 ```
 
-9. import key
+9. Import Your Private Key
 ```
 aios-cli hive import-keys ./my.pem
 ```
 
-10. Login
+10. Login to aios
 ```
 aios-cli hive login
 ```
 
-11. Pilih Tier
+11. Choose Tier
 ```
 aios-cli hive select-tier 5
 ```
 
-12. Add Models
+12. Add Model
 ```
 aios-cli models add hf:TheBloke/Mistral-7B-Instruct-v0.1-GGUF:mistral-7b-instruct-v0.1.Q4_K_S.gguf
 ```
@@ -81,12 +86,44 @@ aios-cli models add hf:TheBloke/Mistral-7B-Instruct-v0.1-GGUF:mistral-7b-instruc
 aios-cli hive connect
 ```
 
-14. Backup Pubkey + Privkey
+14. Backup Your Pubkey and Private key
 ```
 aios-cli hive whoami
 ```
 
-15. Cek Points
+# Commands
+
+1. ### `status`
+Checks the status of your local aiOS daemon
+```
+aios-cli status
+```
+
+2. ### `Terminate aios`
+Terminates the currently running local aiOS daemon
+```
+aios-cli kill
+```
+
+3. ### `system-info`
+Shows you your system specifications
+```
+aios-cli system-info
+```
+
+4. ### `version`
+Prints the current version of the aiOS
+```
+aios-cli version
+```
+
+5. ### `Check Points aios`
 ```
 aios-cli hive points
+```
+
+# Attention
+This script is summarized from the official aios, Below we display our official aios repository
+```
+https://github.com/hyperspaceai/aios-cli.git
 ```
