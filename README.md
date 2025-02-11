@@ -21,15 +21,22 @@ docker run -it --name aios ubuntu:22.04
 docker container start aios
 ```
 
-4. Masuk ke dalam Container
+4. Enter the Container
 ```
 docker container exec -it aios /bin/bash
 ```
 
-5. Update Docker Ubuntu dan Install HyperSpace
+5. Update Ubuntu Docker and Install HyperSpace
 ```
 cd && apt update && apt upgrade && apt install curl screen nano -y
+```
+
+```
 curl https://download.hyper.space/api/install | bash
+```
+
+> After Running the Command Above, Continue by Running the Command Below
+```
 source /root/.bashrc
 ```
 
